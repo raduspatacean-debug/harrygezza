@@ -7,7 +7,7 @@ const songs: Song[] = [
   { title: 'Under Your Spell',            year: '2025', src: '/audio/under-your-spell.mp3',            color: '#FFD700' },
   { title: 'But Baby',                    year: '2026', src: '/audio/but-baby.mp3',                    color: '#7B35E8' },
   { title: "But You're Just a Pretender", year: '2026', src: '/audio/but-youre-just-a-pretender.mp3',   color: '#E82B4A' },
-  { title: 'Hunger for Love',             year: '2025', src: '/audio/hunger-for-love.mp3',              color: '#F5C400' },
+  { title: 'Hunger for You',              year: '2026', src: '/audio/hunger-for-you.mp3',               color: '#F5C400' },
   { title: 'Out for a Ride',              year: '2026', src: '/audio/out-for-a-ride.mp3',               color: '#5B1FE0' },
 ]
 
