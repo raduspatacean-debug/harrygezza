@@ -29,7 +29,19 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-16 md:py-28 px-5 md:px-6" style={{ zIndex: 1 }}>
+    <section
+      id="contact"
+      className="relative py-16 md:py-28 px-5 md:px-6"
+      style={{
+        zIndex: 1,
+        // Same deep purple wash as About, Studio and Releases
+        background: `
+          radial-gradient(ellipse 90% 70% at 20% 0%, rgba(120,85,160,.42) 0%, transparent 60%),
+          radial-gradient(ellipse 80% 60% at 80% 100%, rgba(105,70,150,.35) 0%, transparent 60%),
+          linear-gradient(168deg, #2E1B4D 0%, #3A2354 38%, #43295C 72%, #472D62 100%)
+        `,
+      }}
+    >
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-xs font-bold tracking-[.22em] uppercase mb-2 flex items-center justify-center gap-2" style={{ color: 'var(--pink)', fontFamily: 'DM Sans, system-ui' }}>

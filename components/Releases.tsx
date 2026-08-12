@@ -35,10 +35,11 @@ export default function Releases() {
       className="relative overflow-hidden py-20 md:py-32 px-5 md:px-6"
       style={{
         zIndex: 1,
+        // Same deep purple wash as About and Studio
         background: `
-          radial-gradient(ellipse 70% 45% at 50% 100%, rgba(245,196,0,.16) 0%, transparent 70%),
-          radial-gradient(ellipse 60% 50% at 50% 0%, rgba(91,31,224,.22) 0%, transparent 65%),
-          linear-gradient(180deg, #0A0518 0%, #12082B 45%, #1A0C33 100%)
+          radial-gradient(ellipse 90% 70% at 20% 0%, rgba(120,85,160,.42) 0%, transparent 60%),
+          radial-gradient(ellipse 80% 60% at 80% 100%, rgba(105,70,150,.35) 0%, transparent 60%),
+          linear-gradient(168deg, #2E1B4D 0%, #3A2354 38%, #43295C 72%, #472D62 100%)
         `,
       }}
     >

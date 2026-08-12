@@ -20,9 +20,10 @@ export default function Home() {
       {/* bridge the two purple sections */}
       <Divider bg="linear-gradient(#472D62, #2E1B4D)" />
       <Studio />
-      {/* fade out of purple into the venue-dark music section */}
-      <Divider bg="linear-gradient(#472D62, #0A0518)" />
+      {/* all four sections now share the same purple wash, so this bridges flat */}
+      <Divider bg="#472D62" />
       <Releases />
+      <Divider bg="#472D62" />
       <Contact />
       <Footer />
     </main>
