@@ -93,9 +93,9 @@ export default function Hero() {
         <p
           className="font-display italic mb-8 mx-auto"
           style={{
-            fontSize: 'clamp(1.15rem, 2.2vw, 1.5rem)',
+            fontSize: 'clamp(.82rem, 4.2vw, 1.5rem)',
             maxWidth: 620,
-            lineHeight: 1.6,
+            lineHeight: 1.5,
             color: 'rgba(255,245,204,.82)',
             textShadow: '0 2px 18px rgba(13,8,40,.75)',
           }}
