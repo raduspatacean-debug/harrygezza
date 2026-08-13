@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import Playlist, { type Song } from './Playlist'
 
 const songs: Song[] = [
+  { title: 'No Self Control',             year: '2025', src: '/audio/no-self-control.mp3',              color: '#E82B4A' },
   { title: 'Under Your Spell',            year: '2025', src: '/audio/under-your-spell.mp3',            color: '#FFD700' },
   { title: 'But Baby',                    year: '2026', src: '/audio/but-baby.mp3',                    color: '#7B35E8' },
   { title: "But You're Just a Pretender", year: '2026', src: '/audio/but-youre-just-a-pretender.mp3',   color: '#E82B4A' },
