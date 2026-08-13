@@ -100,9 +100,16 @@ export default function Contact() {
           <p className="text-xs font-bold tracking-[.22em] uppercase mb-2 flex items-center justify-center gap-2" style={{ color: 'var(--pink)', fontFamily: 'DM Sans, system-ui' }}>
             <span style={{ color: 'var(--gold)' }}>✿</span> Get in Touch
           </p>
-          <h2 className="font-display font-black italic uppercase leading-[.92]" style={{ fontSize: 'clamp(2.4rem, 5.5vw, 5rem)' }}>
+          <h2 className="font-display font-black italic uppercase leading-[.92] mb-5" style={{ fontSize: 'clamp(2.4rem, 5.5vw, 5rem)' }}>
             Book a <span className="gradient-text-warm">Show</span>
           </h2>
+          <a
+            href="tel:+40743621133"
+            className="inline-flex items-center gap-2 font-display italic transition-opacity hover:opacity-75"
+            style={{ fontSize: '1.1rem', color: 'var(--cream)' }}
+          >
+            <span style={{ color: 'var(--gold)' }}>✆</span> +40 743 621 133
+          </a>
         </div>
 
         <div className="max-w-xl mx-auto">
