@@ -9,6 +9,7 @@ const songs: Song[] = [
   { title: "But You're Just a Pretender", year: '2026', src: '/audio/but-youre-just-a-pretender.mp3',   color: '#E82B4A' },
   { title: 'Hunger for You',              year: '2026', src: '/audio/hunger-for-you.mp3',               color: '#F5C400' },
   { title: 'Out for a Ride',              year: '2026', src: '/audio/out-for-a-ride.mp3',               color: '#5B1FE0' },
+  { title: "La vie c'est ça",             year: '2026', src: '/audio/la-vie-cest-ca.mp3',                color: '#FFD700' },
 ]
 
 // Spotlights hanging over the stage
