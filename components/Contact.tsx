@@ -31,10 +31,10 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-16 md:py-28 px-5 md:px-6"
+      className="relative overflow-hidden py-16 md:py-28 px-5 md:px-6"
       style={{
         zIndex: 1,
-        // Same deep purple wash as About, Studio and Releases
+        // Same deep purple wash as About, Studio and Releases — sits behind the video as a fallback
         background: `
           radial-gradient(ellipse 90% 70% at 20% 0%, rgba(120,85,160,.42) 0%, transparent 60%),
           radial-gradient(ellipse 80% 60% at 80% 100%, rgba(105,70,150,.35) 0%, transparent 60%),
@@ -42,7 +42,32 @@ export default function Contact() {
         `,
       }}
     >
-      <div className="max-w-5xl mx-auto">
+      {/* ── Subtle looping video, blended into the purple wash ── */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full"
+        style={{ objectFit: 'cover', objectPosition: 'center', zIndex: 0, opacity: .34 }}
+      >
+        <source src="/contact-bg.mp4" type="video/mp4" />
+      </video>
+
+      {/* Purple wash on top so the footage blends rather than competes */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          zIndex: 0,
+          background: `
+            radial-gradient(ellipse 90% 70% at 20% 0%, rgba(120,85,160,.55) 0%, transparent 60%),
+            radial-gradient(ellipse 80% 60% at 80% 100%, rgba(105,70,150,.5) 0%, transparent 60%),
+            linear-gradient(168deg, rgba(46,27,77,.88) 0%, rgba(58,35,84,.82) 38%, rgba(67,41,92,.82) 72%, rgba(71,45,98,.88) 100%)
+          `,
+        }}
+      />
+
+      <div className="relative max-w-5xl mx-auto" style={{ zIndex: 2 }}>
         <div className="text-center mb-16">
           <p className="text-xs font-bold tracking-[.22em] uppercase mb-2 flex items-center justify-center gap-2" style={{ color: 'var(--pink)', fontFamily: 'DM Sans, system-ui' }}>
             <span style={{ color: 'var(--gold)' }}>✿</span> Get in Touch
