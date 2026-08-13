@@ -105,8 +105,8 @@ export default function Contact() {
           </h2>
           <a
             href="tel:+40743621133"
-            className="inline-flex items-center gap-2 font-display italic transition-opacity hover:opacity-75"
-            style={{ fontSize: '1.1rem', color: 'var(--cream)' }}
+            className="inline-flex items-center gap-3 font-display font-bold italic transition-opacity hover:opacity-75"
+            style={{ fontSize: 'clamp(1.5rem, 3.2vw, 2.1rem)', color: 'var(--cream)' }}
           >
             <span style={{ color: 'var(--gold)' }}>✆</span> +40 743 621 133
           </a>
