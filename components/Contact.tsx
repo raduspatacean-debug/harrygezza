@@ -1,6 +1,5 @@
 const PHONE_DISPLAY = '+40 743 621 133'
 const PHONE_HREF    = '+40743621133'
-const EMAIL         = 'raduspatacean@gmail.com'
 
 export default function Contact() {
   const linkStyle: React.CSSProperties = {
@@ -63,21 +62,13 @@ export default function Contact() {
           <div className="h-px w-16 sm:w-24" style={{ background: 'linear-gradient(90deg,var(--gold),transparent)' }} />
         </div>
 
-        <div className="flex flex-col items-center gap-6">
+        <div className="flex flex-col items-center">
           <a
             href={`tel:${PHONE_HREF}`}
             className="inline-flex items-center gap-3 font-display font-bold italic transition-opacity hover:opacity-75"
             style={linkStyle}
           >
             <span style={{ color: 'var(--gold)' }}>✆</span> {PHONE_DISPLAY}
-          </a>
-
-          <a
-            href={`mailto:${EMAIL}`}
-            className="inline-flex items-center gap-3 font-display font-bold italic break-all transition-opacity hover:opacity-75"
-            style={linkStyle}
-          >
-            <span style={{ color: 'var(--gold)' }}>✉</span> {EMAIL}
           </a>
         </div>
       </div>
