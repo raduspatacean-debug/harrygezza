@@ -2,17 +2,45 @@
 
 import { useState } from 'react'
 
+const BOOKING_EMAIL = 'raduspatacean@gmail.com'
+
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', event: '', message: '' })
-  const [sent, setSent]  = useState(false)
+  const [sent, setSent]     = useState(false)
+  const [sending, setSending] = useState(false)
+  const [failed, setFailed] = useState(false)
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setSent(true)
+    setSending(true)
+    setFailed(false)
+    try {
+      const res = await fetch(`https://formsubmit.co/ajax/${BOOKING_EMAIL}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: `New booking request from ${form.name || 'the HarryGezza site'}`,
+          _template: 'table',
+          Name: form.name,
+          Email: form.email,
+          'Event type': form.event,
+          Message: form.message,
+        }),
+      })
+      const data = await res.json()
+      // FormSubmit answers HTTP 200 even when it didn't deliver (e.g. a
+      // not-yet-activated target address), so the real signal is this field.
+      if (!res.ok || data.success !== 'true') throw new Error(data.message || 'Request failed')
+      setSent(true)
+    } catch {
+      setFailed(true)
+    } finally {
+      setSending(false)
+    }
   }
 
   const inputStyle: React.CSSProperties = {
@@ -127,17 +155,25 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
+                  disabled={sending}
                   className="w-full py-4 rounded-full text-xs font-black tracking-widest uppercase transition-all duration-300 hover:scale-[1.02]"
                   style={{
                     background: 'linear-gradient(135deg, var(--gold), var(--amber))',
                     color: '#1a0030',
                     border: 'none',
-                    cursor: 'pointer',
+                    cursor: sending ? 'default' : 'pointer',
+                    opacity: sending ? .7 : 1,
                     fontFamily: 'DM Sans, system-ui',
                   }}
                 >
-                  ✿ Send Message
+                  {sending ? 'Sending…' : '✿ Send Message'}
                 </button>
+
+                {failed && (
+                  <p className="text-center text-xs" style={{ color: 'var(--pink)', fontFamily: 'DM Sans, system-ui' }}>
+                    Something went wrong — please try again, or email {BOOKING_EMAIL} directly.
+                  </p>
+                )}
               </form>
             )}
           </div>
