@@ -2,9 +2,10 @@ const PHONE_DISPLAY = '+40 743 621 133'
 const PHONE_HREF    = '+40743621133'
 
 export default function Contact() {
+  // Matches the hero tagline's restraint
   const linkStyle: React.CSSProperties = {
-    fontSize: 'clamp(1.35rem, 3.4vw, 2.4rem)',
-    color: 'var(--cream)',
+    fontSize: 'clamp(.95rem, 2.2vw, 1.5rem)',
+    color: 'rgba(255,245,204,.82)',
     textShadow: '0 2px 18px rgba(13,8,40,.75)',
   }
 
