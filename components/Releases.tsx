@@ -109,10 +109,12 @@ export default function Releases() {
 
       {/* ── Content ── */}
       <div className="relative max-w-5xl mx-auto" style={{ zIndex: 2 }}>
-        <div className="mb-10 md:mb-14">
+        {/* Badge overlaps the player's top-right corner, mirroring the studio photo */}
+        <div className="relative">
           <div
-            className="inline-block px-4 py-2 rounded-full mb-5"
+            className="absolute -top-4 right-4 sm:right-6 px-4 py-2 rounded-full"
             style={{
+              zIndex: 3,
               background: '#FFD200',
               color: '#2B0D5E',
               fontFamily: 'DM Sans, system-ui',
@@ -124,9 +126,9 @@ export default function Releases() {
           >
             MUSIC
           </div>
-        </div>
 
-        <Playlist songs={songs} />
+          <Playlist songs={songs} />
+        </div>
 
         {/* Streaming platforms */}
         <p className="text-center mt-14 mb-4 text-[.6rem] tracking-[.2em] uppercase" style={{ color: 'var(--cream3)', fontFamily: 'DM Sans, system-ui' }}>Also on</p>
