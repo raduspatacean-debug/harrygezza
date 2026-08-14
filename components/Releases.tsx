@@ -109,10 +109,10 @@ export default function Releases() {
 
       {/* ── Content ── */}
       <div className="relative max-w-5xl mx-auto" style={{ zIndex: 2 }}>
-        {/* Badge overlaps the player's top-right corner, mirroring the studio photo */}
+        {/* Badge overlaps the player's top-left corner, matching the studio photo */}
         <div className="relative">
           <div
-            className="absolute -top-4 right-4 sm:right-6 px-4 py-2 rounded-full"
+            className="absolute -top-4 left-4 sm:left-6 px-4 py-2 rounded-full"
             style={{
               zIndex: 3,
               background: '#FFD200',
