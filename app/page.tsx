@@ -5,6 +5,7 @@ import Divider from '@/components/Divider'
 import About from '@/components/About'
 import Releases from '@/components/Releases'
 import Studio from '@/components/Studio'
+import Video from '@/components/Video'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 
@@ -23,6 +24,8 @@ export default function Home() {
       {/* all four sections now share the same purple wash, so this bridges flat */}
       <Divider bg="#472D62" />
       <Releases />
+      {/* same purple wash continues, so this bridges flat too */}
+      <Video />
       <Divider bg="#472D62" />
       <Contact />
       <Footer />
